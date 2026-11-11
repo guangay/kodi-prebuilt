@@ -36,7 +36,9 @@ define Build/Compile
 endef
 
 define Package/kodi/install
-	$(CP) $(PKG_BUILD_DIR)/. $(1)/
+	$(INSTALL_DIR) $(1)/usr $(1)/etc
+	$(CP) $(PKG_BUILD_DIR)/usr $(1)/
+	$(CP) $(PKG_BUILD_DIR)/etc $(1)/
 	$(INSTALL_DIR) $(1)/usr/lib/kodi
 	mv $(1)/usr/lib/kodi/kodi-gbm $(1)/usr/lib/kodi/kodi-gbm.real
 	printf '#!/bin/sh\nexport LD_LIBRARY_PATH=/usr/lib/kodi-compat:$$LD_LIBRARY_PATH\nexec /usr/lib/kodi/kodi-gbm.real "$$@"\n' > $(1)/usr/lib/kodi/kodi-gbm
