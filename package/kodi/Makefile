@@ -7,8 +7,8 @@ PKG_NAME:=kodi
 PKG_VERSION:=20.5
 PKG_RELEASE:=1
 PKG_SOURCE:=kodi-prebuilt-20.5.tar.gz
-PKG_SOURCE_URL:=https://github.com/guangay/kodi-prebuilt/releases/download/prebuilt-20.5/
-PKG_HASH:=faafd35b1a7cfe7b8bd620fcc7433428b3188ca6b6971072e749e87502e0c797
+PKG_SOURCE_URL:=https://github.com/guangay/kodi-prebuilt/releases/download/prebuilt-20.5-r2/
+PKG_HASH:=ed2bef3d68f619c85adf963f32ceac9dfe8c0ef51a9917bd0780e6e208a2f5ac
 PKG_LICENSE:=GPL-2.0-or-later
 PKG_BUILD_PARALLEL:=1
 
@@ -18,7 +18,7 @@ define Package/kodi
   SECTION:=multimedia
   CATEGORY:=Multimedia
   TITLE:=Kodi 20.5 (prebuilt, aarch64, bundled libs)
-  DEPENDS:=+libc +libgcc1 +alsa-lib +libdrm +libinput +python3-light
+  DEPENDS:=+libc +libgcc +alsa-lib +libdrm +libinput +python3-light
 endef
 
 define Package/kodi/description
